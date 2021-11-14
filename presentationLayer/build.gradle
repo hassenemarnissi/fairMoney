@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdk Integer.parseInt(compileSdkVersionVar)
+
+    defaultConfig {
+        minSdk Integer.parseInt(minSdkVersionVar)
+        targetSdk Integer.parseInt(targetSdkVersionVar)
+        versionCode computeVersionCode()
+        versionName computeProdVersionName()
+        version versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {}
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+configurations {
+    compileClasspath {
+        resolutionStrategy.force 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
+    }
+}
+
+dependencies {
+    implementation project(':domainLayer')
+
+    implementation libraries.kotlin
+    implementation libraries.ktx
+    implementation libraries.appCompat
+    implementation libraries.material
+    implementation libraries.constraint
+    implementation libraries.navigation
+    implementation libraries.navigationUi
+    implementation libraries.lottie
+    implementation libraries.hiltVm
+    implementation libraries.coroutines
+    implementation libraries.hilt
+    implementation libraries.fresco
+    implementation libraries.shimmer
+
+    kapt libraries.hiltCompiler
+    kapt libraries.hiltAndCompiler
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.kluent
+    testImplementation testLibraries.kluentAndroid
+    testImplementation testLibraries.mockitoKotlin
+    testImplementation testLibraries.coroutines
+    testImplementation testLibraries.archTest
+}

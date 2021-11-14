@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'kotlin-allopen'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation libraries.kotlin
+    implementation libraries.coroutines
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.kluent
+    testImplementation testLibraries.kluentAndroid
+    testImplementation testLibraries.mockitoKotlin
+    testImplementation testLibraries.coroutines
+}

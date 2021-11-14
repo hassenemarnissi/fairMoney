@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk Integer.parseInt(compileSdkVersionVar)
+
+    defaultConfig {
+        minSdk Integer.parseInt(minSdkVersionVar)
+        targetSdk Integer.parseInt(targetSdkVersionVar)
+        versionCode computeVersionCode()
+        versionName computeProdVersionName()
+        version versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {}
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+configurations {
+    compileClasspath {
+        resolutionStrategy.force 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
+    }
+}
+
+dependencies {
+    implementation project(':domainLayer')
+
+    implementation libraries.kotlin
+    implementation libraries.ktx
+    implementation libraries.coroutines
+    implementation libraries.retrofit
+    implementation libraries.gson
+    implementation libraries.room
+    implementation libraries.roomRuntime
+    implementation libraries.security
+    implementation libraries.hilt
+
+    kapt libraries.hiltCompiler
+    kapt libraries.hiltAndCompiler
+    kapt libraries.roomCompiler
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.kluent
+    testImplementation testLibraries.kluentAndroid
+    testImplementation testLibraries.mockitoKotlin
+    testImplementation testLibraries.coroutines
+}
