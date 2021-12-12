@@ -3,7 +3,9 @@ package com.example.fairmoney
 import android.app.Application
 import android.content.ComponentCallbacks2
 import com.facebook.drawee.backends.pipeline.Fresco
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class FairMoneyApplication : Application() {
     override fun onCreate() {
         super.onCreate()

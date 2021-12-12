@@ -13,25 +13,23 @@ import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Singleton
 
+@Module
+@InstallIn(ApplicationComponent::class)
 object DataBaseModule {
-    @Module
-    @InstallIn(ApplicationComponent::class)
-    object DataBaseModule {
 
-        @Provides
-        @Singleton
-        fun provideAppDataBase(@ApplicationContext context: Context): AppDataBase {
-            return Room.databaseBuilder(context, AppDataBase::class.java, DATABASE_NAME)
-                .fallbackToDestructiveMigration()
-                .build()
-        }
-
-        @Provides
-        @Singleton
-        fun provideUsersDao(database: AppDataBase): IUserDao = database.usersDao()
-
-        @Provides
-        @Singleton
-        fun provideUserDetailsDao(database: AppDataBase): IUserDetailsDao = database.userDetailsDao()
+    @Provides
+    @Singleton
+    fun provideAppDataBase(@ApplicationContext context: Context): AppDataBase {
+        return Room.databaseBuilder(context, AppDataBase::class.java, DATABASE_NAME)
+            .fallbackToDestructiveMigration()
+            .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideUsersDao(database: AppDataBase): IUserDao = database.usersDao()
+
+    @Provides
+    @Singleton
+    fun provideUserDetailsDao(database: AppDataBase): IUserDetailsDao = database.userDetailsDao()
 }

@@ -1,13 +1,17 @@
 package com.example.fairmoney.di
 
+import android.provider.UserDictionary.Words.APP_ID
 import com.example.data.details.source.remote.IUserDetailsRemoteService
 import com.example.data.users.source.remote.IUserRemoteService
+import com.example.fairmoney.BuildConfig.APP_ID
 import com.example.fairmoney.BuildConfig.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -28,7 +32,14 @@ object NetworkModule {
     @Singleton
     fun provideHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
+            .addInterceptor ( Interceptor {chain->
+                    val request = chain.request().newBuilder()
+                        .header("app-id", APP_ID)
+                        .build()
+                    chain.proceed(request)
+                })
             .addInterceptor(loggingInterceptor)
+
             .build()
     }
 

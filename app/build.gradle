@@ -27,7 +27,7 @@ android {
         fairmoney {
             buildConfigField "String", 'BASE_URL', '"https://dummyapi.io/data/v1/"'
             buildConfigField "String", 'DATABASE_NAME', '"fairMoney-database"'
-            buildConfigField "String", 'APP_ID', '"618ffe95b9c65e519410543a"'
+            buildConfigField "String", 'APP_ID', '"61b66a90ecd63e45879b4e3f"'
 
         }
     }
@@ -62,6 +62,7 @@ android {
 
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 
     packagingOptions {
