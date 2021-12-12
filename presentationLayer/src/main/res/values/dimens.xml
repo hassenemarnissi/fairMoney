@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_recycler_view">8dp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="margin_view">2dp</dimen>
+    <dimen name="text_size">24sp</dimen>
+    <dimen name="text_small_size">10sp</dimen>
+    <dimen name="elevation_card">3dp</dimen>
+    <dimen name="margin_card">5dp</dimen>
+    <dimen name="raduis_card">3dp</dimen>
+    <dimen name="margin_view_shimmer">10dp</dimen>
+    <dimen name="image_view_height_shimmer">80dp</dimen>
+    <dimen name="margin_view_top_shimmer">20dp</dimen>
+    <dimen name="large_margin_view">8dp</dimen>
+</resources>

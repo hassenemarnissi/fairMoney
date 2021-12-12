@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="users_section">Users</string>
+    <string name="user_detail_section">Details</string>
+
+    <!--Accessibility-->
+    <string name="accessibility_photo">photo</string>
+    <string name="app_name">FairMoney</string>
+</resources>

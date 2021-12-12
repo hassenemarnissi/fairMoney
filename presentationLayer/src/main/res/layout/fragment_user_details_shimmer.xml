@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/imageViewUsershimmer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_view_height_shimmer"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPropertyTypeshimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toStartOf="@+id/textViewProfessionalshimmer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUsershimmer" />
+
+            <TextView
+                android:id="@+id/textViewProfessionalshimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                android:padding="@dimen/padding"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPropertyTypeshimmer"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUsershimmer" />
+
+            <TextView
+                android:id="@+id/textViewSizeshimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPropertyTypeshimmer" />
+
+            <TextView
+                android:id="@+id/textViewPriceshimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSizeshimmer" />
+
+            <TextView
+                android:id="@+id/textViewCityshimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_view_shimmer"
+                android:layout_marginTop="@dimen/margin_view_shimmer"
+                android:layout_marginEnd="@dimen/margin_view_shimmer"
+                android:layout_marginBottom="@dimen/margin_view_shimmer"
+                android:background="@color/gray_shimmer"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPriceshimmer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

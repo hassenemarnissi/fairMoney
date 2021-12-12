@@ -10,13 +10,14 @@ data class UserDetails (
     val picture: String,
     val gender: String,
     val email: String,
-    val dateOfBirth: Date,
+    val dateOfBirth: String,
     val phone: String,
-    val location: Location,
-    val registerDate: Date,
-    val updatedDate:Date
+    //val location: Location,
+    val registerDate: String,
+    val updatedDate:String
 )
 data class Location (
+    val idLocation:Int,
     val street: String,
     val city:String,
     val state:String,
