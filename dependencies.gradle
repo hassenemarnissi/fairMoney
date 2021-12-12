@@ -1,0 +1,92 @@
+ext {
+    testLibsVersion = [
+            junit              : "4.13.2",
+            junitext           : "1.1.3",
+            mockito            : "3.12.4",
+            mockitoKotlin      : "2.2.0",
+            robolectric        : "4.2.1",
+            kluent             : "1.61",
+            coroutines         : "1.4.2",
+            archTest           : "2.1.0"
+    ]
+
+    testLibraries = [
+            /** https://github.com/junit-team/junit4 */
+            junit         : "junit:junit:$testLibsVersion.junit",
+            junitext      : "androidx.test.ext:junit:$testLibsVersion.junitext",
+
+            /** https://github.com/mockito/mockito */
+            mockito       : "org.mockito:mockito-core:$testLibsVersion.mockito",
+            mockitoAndroid: "org.mockito:mockito-android:$testLibsVersion.mockito",
+            mockitoKotlin : "com.nhaarman.mockitokotlin2:mockito-kotlin:$testLibsVersion.mockitoKotlin",
+
+            /** https://github.com/robolectric/robolectric */
+            robolectric   : "org.robolectric:robolectric:$testLibsVersion.robolectric",
+
+            supportRunner : "androidx.test:runner:$testLibsVersion.supportRunner",
+
+            /** https://github.com/MarkusAmshove/Kluent */
+            kluent        : "org.amshove.kluent:kluent:$testLibsVersion.kluent",
+            kluentAndroid : "org.amshove.kluent:kluent-android:$testLibsVersion.kluent",
+
+            coroutines    : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$testLibsVersion.coroutines",
+            archTest      : "androidx.arch.core:core-testing:$testLibsVersion.archTest"
+    ]
+
+    libsVersion = [
+            kotlin         : "1.3.72",
+            ktx            : "1.6.0",
+            appCompat      : "1.3.1",
+            material       : "1.4.0",
+            constraint     : "2.1.0",
+            liveData       : "2.3.1",
+            viewModel      : "2.3.1",
+            navigation     : "2.3.5",
+            navigationUi   : "2.3.5",
+            coroutines     : "1.4.1",
+            retrofit       : "2.8.1",
+            gson           : "2.8.6",
+            room           : "2.3.0",
+            security       : "1.0.0",
+            okhttp         : "4.8.0",
+            hilt           : "2.28.3-alpha",
+            hiltAndCompiler: "2.28.3-alpha",
+            hiltVm         : "1.0.0-alpha01",
+            hiltCompiler   : "1.0.0-alpha01",
+            lottie         : "4.1.0",
+            fresco         : "2.2.0",
+            shimmer        : "0.5.0",
+            cardView       : "1.0.0"
+
+    ]
+
+    libraries = [
+            kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$libsVersion.kotlin",
+            ktx                    : "androidx.core:core-ktx:$libsVersion.ktx",
+            material               : "com.google.android.material:material:$libsVersion.material",
+            constraint             : "androidx.constraintlayout:constraintlayout:$libsVersion.constraint",
+            appCompat              : "androidx.appcompat:appcompat:$libsVersion.appCompat",
+            liveData               : "androidx.lifecycle:lifecycle-livedata-ktx:$libsVersion.liveData",
+            viewModel              : "androidx.lifecycle:lifecycle-viewmodel-ktx:$libsVersion.viewModel",
+            navigation             : "androidx.navigation:navigation-fragment-ktx:$libsVersion.navigation",
+            navigationUi           : "androidx.navigation:navigation-ui-ktx:$libsVersion.navigationUi",
+            coroutines             : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$libsVersion.coroutines",
+            retrofit               : "com.squareup.retrofit2:retrofit:$libsVersion.retrofit",
+            retrofitConverter      : "com.squareup.retrofit2:converter-gson:$libsVersion.retrofit",
+            gson                   : "com.google.code.gson:gson:$libsVersion.gson",
+            room                   : "androidx.room:room-ktx:$libsVersion.room",
+            roomRuntime            : "androidx.room:room-runtime:$libsVersion.room",
+            roomCompiler           : "androidx.room:room-compiler:$libsVersion.room",
+            security               : "androidx.security:security-crypto:$libsVersion.security",
+            okhttp                 : "com.squareup.okhttp3:okhttp:$libsVersion.okhttp",
+            okhttpInt              : "com.squareup.okhttp3:logging-interceptor:$libsVersion.okhttp",
+            hilt                   : "com.google.dagger:hilt-android:$libsVersion.hilt",
+            hiltAndCompiler        : "com.google.dagger:hilt-android-compiler:$libsVersion.hiltAndCompiler",
+            hiltVm                 : "androidx.hilt:hilt-lifecycle-viewmodel:$libsVersion.hiltVm",
+            hiltCompiler           : "androidx.hilt:hilt-compiler:$libsVersion.hiltCompiler",
+            lottie                 : "com.airbnb.android:lottie:$libsVersion.lottie",
+            fresco                 : "com.facebook.fresco:fresco:$libsVersion.fresco",
+            shimmer                : "com.facebook.shimmer:shimmer:$libsVersion.shimmer",
+            cardView               : "androidx.cardview:cardview:$libsVersion.cardView"
+    ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.8">
+      <module name="Fairmoney.app" target="11" />
+      <module name="Fairmoney.core" target="11" />
+      <module name="Fairmoney.dataLayer" target="11" />
+      <module name="Fairmoney.presentationLayer" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
