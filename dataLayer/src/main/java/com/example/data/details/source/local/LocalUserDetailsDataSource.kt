@@ -20,9 +20,9 @@ class LocalUserDetailsDataSource  @Inject constructor(private val dao: IUserDeta
     override suspend fun deleteUserDetails(id: String) =
         dao.deleteUserDetails(id)
 
-    override suspend fun getUserDetails(id: String): Flow<UserDetails?> =
+    override suspend fun getUserDetails(id: String): Flow<UserDetails> =
         callbackFlow {
-            offer(dao.getUserDetails(id)?.toUserDetails())
+            dao.getUserDetails(id).toUserDetails().let { offer(it) }
             awaitClose { cancel() }
         }
 

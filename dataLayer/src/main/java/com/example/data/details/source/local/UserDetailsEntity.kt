@@ -23,19 +23,21 @@ data class UserDetailsEntity (
     @ColumnInfo(name = "email", defaultValue = "")
     val email: String,
     @ColumnInfo(name = "dateOfBirth")
-    val dateOfBirth: Date,
+    val dateOfBirth: String,
     @ColumnInfo(name = "phone", defaultValue = "")
     val phone: String,
-    @ColumnInfo(name = "location", defaultValue = "")
-    @Embedded val location: LocationEntity,
+    //@ColumnInfo(name = "location", defaultValue = "")
+    //@Embedded val location: LocationEntity,
     @ColumnInfo(name = "registerDate")
-    val registerDate: Date,
+    val registerDate: String,
     @ColumnInfo(name = "updatedDate")
-    val updatedDate: Date
+    val updatedDate: String
 )
 
 @Entity(tableName ="locationTable")
 data class LocationEntity (
+    @PrimaryKey(autoGenerate = true)
+    val idLocation:Int ,
     @ColumnInfo(name = "street", defaultValue = "")
     val street: String,
     @ColumnInfo(name = "city", defaultValue = "")

@@ -18,7 +18,7 @@ class DetailsRepository @Inject constructor(
     private val localUserDetailsDataSource: LocalUserDetailsDataSource,
     private val remoteUserDetailsDataSource: RemoteUserDetailsDataSource
 ) : IUserDetailsRepository {
-    override suspend fun getUserDetails(id: String): Flow<Result<UserDetails?>> = callbackFlow {
+    override suspend fun getUserDetails(id: String): Flow<Result<UserDetails>> = callbackFlow {
         localUserDetailsDataSource.getUserDetails(id).collect { localUserDetail ->
             if (localUserDetail != null) {
                 try {

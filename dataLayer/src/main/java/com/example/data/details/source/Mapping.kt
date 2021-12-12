@@ -2,8 +2,9 @@ package com.example.data.details.source
 
 import com.example.data.details.source.local.LocationEntity
 import com.example.data.details.source.local.UserDetailsEntity
-import com.example.domainlayer.entities.Location
-import com.example.domainlayer.entities.UserDetails
+import com.example.domainlayer.details.Location
+import com.example.domainlayer.details.UserDetails
+
 
 internal fun UserDetails.toUserDetailsEntity() = UserDetailsEntity(
     this.id,
@@ -15,7 +16,7 @@ internal fun UserDetails.toUserDetailsEntity() = UserDetailsEntity(
     email,
     dateOfBirth,
     phone,
-    LocationEntity(street = location.street,city = location.city,state=location.state,country = location.country,timezone = location.timezone),
+    //LocationEntity(idLocation=location.idLocation,street = location.street,city = location.city,state=location.state,country = location.country,timezone = location.timezone),
     registerDate,
     updatedDate
 )
@@ -29,7 +30,8 @@ internal fun UserDetailsEntity.toUserDetails()=
         email,
         dateOfBirth,
         phone,
-        Location(street = location.street,city = location.city,state=location.state,country = location.country,timezone = location.timezone),
+       // Location(idLocation= location.idLocation,street = location.street,city = location.city,state=location.state,country = location.country,timezone = location.timezone)
         registerDate,
-        updatedDate)
+        updatedDate
+        )
 

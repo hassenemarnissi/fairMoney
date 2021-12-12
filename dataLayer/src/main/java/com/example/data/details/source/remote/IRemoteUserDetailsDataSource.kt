@@ -1,7 +1,6 @@
 package com.example.data.details.source.remote
 
-
-import com.example.domainlayer.entities.UserDetails
+import com.example.domainlayer.details.UserDetails
 import kotlinx.coroutines.flow.Flow
 
 interface IRemoteUserDetailsDataSource {
